@@ -1,6 +1,5 @@
 fileignoreconfig:
-- filename: joy.txt
-  checksum: d9789eb08cea0670d08229c824ce00c1f14e8b0d04b822a1e6bedafc0b2be4c3
-fileignoreconfig:
+- filename: secure/Tom
+  checksum: d69a77ef294dee1f521bec0110abfd8fd114179e6fa9b46d02773f532cbc87e3
 - filename: kid
-  checksum: 1df8965f8d5ebd574fc6f8b4bf9982d55c9e2cd2b01f156220e61a0667b260de
+  checksum: e327d5cb7e94747823f467325965a8cb85265d222cbe53faf5c30a111a839e3d
