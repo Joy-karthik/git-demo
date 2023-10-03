@@ -1,3 +1,6 @@
 fileignoreconfig:
 - filename: joy.txt
   checksum: d9789eb08cea0670d08229c824ce00c1f14e8b0d04b822a1e6bedafc0b2be4c3
+fileignoreconfig:
+- filename: kid
+  checksum: 1df8965f8d5ebd574fc6f8b4bf9982d55c9e2cd2b01f156220e61a0667b260de
