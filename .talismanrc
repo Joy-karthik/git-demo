@@ -1,5 +1,0 @@
-fileignoreconfig:
-- filename: secure/Tom
-  checksum: d69a77ef294dee1f521bec0110abfd8fd114179e6fa9b46d02773f532cbc87e3
-- filename: kid
-  checksum: e327d5cb7e94747823f467325965a8cb85265d222cbe53faf5c30a111a839e3d
