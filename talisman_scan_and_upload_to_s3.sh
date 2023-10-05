@@ -1,19 +1,20 @@
 #!/bin/bash
 
-# Run Talisman and capture its output
-talisman_output=$(talisman --scan 2>&1)
+# Run Talisman
+talisman --scan
 
-# Always generate the report
-report_file=/home/ubuntu/joy/git-demo/talisman_report/talisman_reports/data/report.json
-echo "$talisman_output" > "$report_file"
+# Check if Talisman detected issues
+if [ $? -ne 0 ]; then
+    # Create a temporary directory to save files
+    tmp_dir=$(mktemp -d)
 
-# Upload the report to S3 using the AWS CLI
-aws s3 cp "$report_file" s3://zues2023/talisman_reports/
+    # Copy the relevant files to the temporary directory
+    # Example: cp path/to/talisman_issues.txt $tmp_dir/
 
-# Check if Talisman found any issues
-if [[ $talisman_output == *"Talisman Report:"* ]]; then
-    echo "Talisman found issues."
-else
-    echo "No issues found by Talisman."
+    # Upload the files to the S3 bucket
+    aws s3 cp $tmp_dir s3://zues2023/
+
+    # Clean up temporary directory
+    rm -r $tmp_dir
 fi
 
