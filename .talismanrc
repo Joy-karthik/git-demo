@@ -1,3 +1,6 @@
 fileignoreconfig:
 - filename: kid
   checksum: 6c9c79a50562f2fbc920dd2b49f8723ed3e0c5c2f8159811d4b048be12599dbe
+fileignoreconfig:
+- filename: kid
+  checksum: 72693fceb01a843c625c3bdda767f8fc8a63053ffa532edc6f549316b0adba50
