@@ -9,6 +9,12 @@ if [ $? -ne 0 ]; then
     echo "$talisman_report" > talisman_report.json
 
     # Upload the report to an S3 bucket
-    aws s3 cp talisman_report.txt s3://zues2023/
+    aws s3 cp talisman_report/talisman_reports/data/report.json s3://zues2023/
+
+    # Display a user-friendly message
+    echo "Talisman scan report saved to S3: Please check 'talisman_report/talisman_reports/data' folder for the talisman scan report"
+else
+    # No issues found, display a message
+    echo "Talisman scan found no issues."
 fi
 
