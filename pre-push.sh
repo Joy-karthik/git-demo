@@ -9,5 +9,5 @@ if [ $? -eq 0 ]; then
     talisman --scan > talisman_report.txt
 
     # Upload the report to an S3 bucket
-    aws s3 cp talisman_report.txt s3://zues2023/
+    aws s3 cp talisman_report/talisman_reports/data/report.json s3://zues2023/
 fi
