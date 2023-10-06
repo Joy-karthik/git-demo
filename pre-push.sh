@@ -6,7 +6,7 @@ talisman_report=$(talisman --scan)
 # Check if Talisman reported any issues
 if [ $? -ne 0 ]; then
     # Save the report to a temporary file
-    #echo "$talisman_report" > talisman_report.json
+    echo "$talisman_report" > talisman_report/talisman_reports/data/report.json
 
     # Display a user-friendly message
     echo "Talisman scan report saved to S3: Please check 'talisman_report/talisman_reports/data' folder for the talisman scan report"
